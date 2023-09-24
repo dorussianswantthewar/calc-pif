@@ -159,18 +159,11 @@ table{
   border-radius: 15px;
   padding: 10px;
 }
-.lined::before{
-  content: "";
-  display: block;
-  width: 120px;
-  height: 1px;
-  background: #000;
-  right: 43%;
-  top: 81%;
-  position: absolute;
-}
-.lined{
-  margin-bottom: 18px;
+hr{
+  margin-top: 4px;
+  margin-bottom: 4px;
+  background-color:#ffc0cc;
+  height: 2px;
 }
 @media(max-width:600px){
   td{
@@ -207,4 +200,5 @@ table{
     right: 12%;
     top: 83%;
   }
+
 }
