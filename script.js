@@ -57,7 +57,7 @@
     var fkol_3sum = 0;
     var fkol_4sum = 0;
     
-  
+
     var i = 0;
     while (i <= 15) {
 
@@ -81,7 +81,8 @@
       }     
       i++;
     }
-      
+  
+    
     var femaleChar = '';
     var femaleEner = '';
     var femaleCreat = '';
@@ -293,7 +294,55 @@
      var spirit = pers + logic + memory;
      var temp = interest + logic + luck;
      var detnum = rch2;
-    
+     
+     var selectday = document.getElementById('days');
+     var day = selectday.options[selectday.selectedIndex].value;
+     
+     var selectmonth = document.getElementById("months");
+     var value2 = selectmonth.value2;
+     var months = selectmonth.options[selectmonth.selectedIndex].text;
+     if(months == 'Січень') {
+      months='01';
+     } 
+     if(months == 'Лютий') {
+      months='02';
+     } 
+     if(months == 'Березень') {
+      months='03';
+     } 
+     if(months == 'Квітень') {
+      months='04';
+     } 
+     if(months == 'Травень') {
+      months='05';
+     } 
+     if(months == 'Червень') {
+      months='06';
+     } 
+     if(months == 'Липень') {
+      months='07';
+     } 
+     if(months == 'Серпень') {
+      months='08';
+     } 
+     if(months == 'Вересень') {
+      months='09';
+     } 
+     if(months == 'Жовтень') {
+      months='10';
+     } 
+     if(months == 'Листопад') {
+      months='11';
+     } 
+     if(months == 'Грудень') {
+      months='12';
+     } 
+     
+     var selectyear = document.getElementById('year');
+     var year = selectyear.options[selectyear.selectedIndex].value;
+
+     var name = document.getElementById('username').value;
+  
 
       if (detnum == 10){
 
@@ -310,44 +359,46 @@
      
 
     
-    return '<div class="pifagor-square"><table rules="all" cellspacing="10" cellpadding="10" style="margin-top:20px; "><tbody>'+
+    return '<div class="pifagor-square" id="result"><table rules="all" cellspacing="10" cellpadding="10" style="margin-top:20px; "><tbody>'+
          '<tr align="center">'+
-        '<td colspan="3" height="110px"><p class="stp" >  Доп. Числа</p>'+rch1+', '+rch2+', '+rch3+', '+rch4+' <p class="stp" >'+fkol_1+'/ '+fkol_2+'/ '+fkol_3+'/ '+fkol_4+'/ '+fkol_5+'/ '+fkol_6+'/ '+fkol_7+'/ '+fkol_8+'/ '+fkol_9+'/ ЧС '+rch2+' </p></td>' +
-        '<td width="120px" height="110px"><p class="stp">Темперамент</p><p class="pifagor-char">'+temp+'</p></td>' +
+         '<td colspan="2" height="110px" style="background:#ffc0cc ;border-top-left-radius: 15px;"><p class="stp" >'+name+'</p><p class="pifagor-char">'+day+'.'+months+'.'+year+'</p></td>'+
+        '<td colspan="1" height="110px" style="background:#ffc0cc ;"><p class="stp" >Число Долі</p><p class="pifagor-char">'+rch2+'</p></td>'+
+        '<td width="120px" height="110px" style="background:#ffc0cc; border-radius="15px"><p class="stp">Темперамент</p><p class="pifagor-char">'+temp+'</p></td>' +
      
 
         '<tr align="center">'+
           '<td width="120px" height="110px"><p class = "pifagor-char"></p><p class = "stp">Характер</p>'+fkol_1+'</td>'+
-          '<td width="120px" height="110px"><p class = "pifagor-char"></p><p class = "stp">Здоровье</p>'+fkol_4+'</td>'+
+          '<td width="120px" height="110px"><p class = "pifagor-char"></p><p class = "stp">Здоровʼя</p>'+fkol_4+'</td>'+
           '<td width="120px" height="110px"><p class = "pifagor-char"></p><p class = "stp">Удача</p>'+fkol_7+'</td>'+
-          '<td width="120px" height="110px"><p class = "pifagor-char"></p><p class = "stp">Цель</p>'+target+'</td>'+
+          '<td width="120px" height="110px" style="background:#ffc0cc ;><p class = "pifagor-char"></p><p class = "stp">Ціль</p>'+target+'</td>'+
           
 
 
         '<tr align="center">'+
-          '<td width="120px" height="110px"><p class = "pifagor-char"></p><p class = "stp">Энергия</p>'+fkol_2+'</td>'+                                                     
-          '<td width="120px" height="110px"><p class = "pifagor-char"></p><p class = "stp">Логика</p>'+fkol_5+'</td>'+                                                                                                                                           
-          '<td width="120px" height="110px"><p class = "pifagor-char"></p><p class = "stp">Долг</p>'+fkol_8+'</td>'+
-          '<td width="120px" height="110px"><p class = "pifagor-char"></p><p class = "stp">Семья</p>'+fam+'</td>'+
+          '<td width="120px" height="110px"><p class = "pifagor-char"></p><p class = "stp">Енергія</p>'+fkol_2+'</td>'+                                                     
+          '<td width="120px" height="110px"><p class = "pifagor-char"></p><p class = "stp">Логіка</p>'+fkol_5+'</td>'+                                                                                                                                           
+          '<td width="120px" height="110px"><p class = "pifagor-char"></p><p class = "stp">Обовʼязок</p>'+fkol_8+'</td>'+
+          '<td width="120px" height="110px" style="background:#ffc0cc ;><p class = "pifagor-char"></p><p class = "stp">Сімʼя</p>'+fam+'</td>'+
           
 
 
         '<tr align="center">'+
-          '<td width="120px" height="110px"><p class = "pifagor-char"></p><p class = "stp">Интерес</p>'+fkol_3+'</td>'+
-          '<td width="120px" height="110px"><p class = "pifagor-char"></p><p class = "stp">Труд</p>'+fkol_6+'</td>'+
-          '<td width="120px" height="110px"><p class = "pifagor-char"></p><p class = "stp">Память</p>'+fkol_9+'</td>'+
-           '<td width="120px" height="110px"><p class = "pifagor-char"></p><p class = "stp">Привычки</p>'+hab+'</td>'+
+          '<td width="120px" height="110px"><p class = "pifagor-char"></p><p class = "stp">Цікавість</p>'+fkol_3+'</td>'+
+          '<td width="120px" height="110px"><p class = "pifagor-char"></p><p class = "stp">Праця</p>'+fkol_6+'</td>'+
+          '<td width="120px" height="110px"><p class = "pifagor-char"></p><p class = "stp">Памʼять</p>'+fkol_9+'</td>'+
+           '<td width="120px" height="110px" style="background:#ffc0cc ;><p class = "pifagor-char"></p><p class = "stp">Звички</p>'+hab+'</td>'+
           
 
 
         '<tr align="center">'+
-          '<td width="120px" colspan="2" height="110px">Самооценка<p class = "pifagor-char">'+selfesteem+'</p><p class = "stp"></p><p class = "stp"></p></td>'+                                                     
-          '<td width="120px" colspan="2" height="110px">Быт<p class = "pifagor-char">'+life+'</p><p class = "stp"></p><p class = "stp"></p></td>'+                                                                                                                                           
-         
-                  
-          '</tbody> '
+          '<td width="120px" height="110px" style="background:#ffc0cc; border-bottom-left-radius:15px;">Самооцінка<p class = "pifagor-char">'+selfesteem+'</p><p class = "stp"></p><p class = "stp"></p></td>'+                                                     
+          '<td width="120px" height="110px" style="background:#ffc0cc;">Побут<p class = "pifagor-char">'+life+'</p><p class = "stp"></p><p class = "stp"></p></td>'+                                                                                                                                           
+          '<td colspan="2" height="110px"> <div id="dynamicText"><p class="stp extr_num_mg" style="font-size:12px;" >Додаткові Числа</p> <p  class="stp extr_num_mg" style="font-size:12px;">'+rch1+', '+rch2+', '+rch3+', '+rch4+' </p> <p class="stp extr_num_mg" style="font-size:12px;">'+fkol_1+'/ '+fkol_2+'/ '+fkol_3+'/ '+fkol_4+'/ '+fkol_5+'/ '+fkol_6+'/ '+fkol_7+'/ '+fkol_8+'/ '+fkol_9+'/ ЧД '+rch2+' </p>  </div></td> ' +
+          '</tbody> ' +
+          '</table>'
           //'</table></div><br><div>Первая сумма: '+rch1+'<br>Вторая сумма: '+rch2+'<br>Третья сумма: '+rch3+'<br>Четвертая сумма: '+rch4+'<br>Пятая сумма: '+rch5+'<br>Шестая сумма: '+rch6+'</div>'                
-                
+
+            
   }
 
 // Пифагор конец
@@ -426,6 +477,7 @@ for (i = 0; i < l; i++) {
       this.classList.toggle("select-arrow-active");
     });
 }
+
 function closeAllSelect(elmnt) {
   /*a function that will close all select boxes in the document,
   except the current select box:*/

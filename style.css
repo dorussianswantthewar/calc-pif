@@ -1,25 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
 body{
     background-image: url(img/bg.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    font-family: 'Oswald', sans-serif;
 }
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@1,300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cuprum:wght@500&display=swap');
 #go-pif {
-    background: white;
-
+    background: rgb(255, 255, 255);
     width: 205px;
-
     padding: 10px;
     cursor: pointer;
     margin-top: 10px;
     display: inline-block;
-    color:#ffc0cb ;
+    color:#000000 ;
     transition: 0.3s ease-out;
-    font-family: 'Montserrat Alternates', sans-serif;
+    border:1px rgb(172, 172, 172) solid;
+    -webkit-box-shadow: 0px 0px 61px -12px rgba(0,0,0,0.63);
+-moz-box-shadow: 0px 0px 61px -12px rgba(0,0,0,0.63);
+box-shadow: 0px 0px 61px -12px rgba(0,0,0,0.63);
+    /* font-family: 'Montserrat Alternates', sans-serif; */
 }
 #go-pif:hover{
     background: #ffc0cc ;
@@ -27,7 +30,7 @@ body{
     
 }
 .calculator-p{
-    font-family: 'Cuprum', sans-serif;
+  /* font-family: 'Cuprum', sans-serif; */
     color: black;
     font-size: 24px;
     padding-bottom: 16px;
@@ -127,23 +130,32 @@ body{
 table{
     background: white;
     border-radius: 15px;
-    color:#eb4034 ;
+    color:#000000 ;
     -webkit-box-shadow: 0px 0px 37px -7px rgba(0,0,0,0.49);
     -moz-box-shadow: 0px 0px 37px -7px rgba(0,0,0,0.49);
     box-shadow: 0px 0px 37px -7px rgba(0,0,0,0.49);
 }
-@media (max-width: 500px) {
-  body{
-    font-size: 10px;
-  }
-  td{
-    height: 93px;
-    width: 93px;
-  }
-  p{
-    font-size: 14px;
-  }
-  .row{
-    margin-left: -100px;
-  }
+.extr_num p{
+  font-size: 12px;
+}
+.extr_num_mg {
+  margin-bottom: 4px;
+}
+.btn-table a img{
+  width: 50px;
+}
+.btn-table{
+  margin-top: 24px;
+  display: flex;
+  gap:150px;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 24px;
+}
+.btn-table button img{
+  width: 50px;
+}
+.btn-table button{
+  border-radius: 15px;
+  padding: 10px;
 }

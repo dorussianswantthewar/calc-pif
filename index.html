@@ -13,6 +13,8 @@
 		<div class="row">
 		<div class="calculator-2">
 			<div class="row">
+				<p class="calculator-p" style="margin:2px;">Ваше Імʼя</p>
+				<input id="username" type="text" placeholder="Імʼя" id="textInput">
 				<p class="calculator-p" style="margin:8px;">Ваша дата народження</p>			
 				<div class="select-box-2 ">
 					<div class="select-flex">
@@ -76,25 +78,30 @@
 				</div>	
 				</div>
 				</div>
-				<a id="go-pif" class="btn  btn-primary btn-go-spec" role="button">Розрахунок</a>
+				<a id="go-pif" class="btn  btn-primary btn-go-spec" role="button">Розрахувати</a>
 			</div>
 		</div>
 	</div>
 	<div class="results" style="text-align:center;">
         <div class="close-result"></div>
             <div id="out">
-				<div class="pifagor-square">
-						<table rules="all" cellspacing="10" cellpadding="10" style="margin-top:20px; ">
+				<div class="pifagor-square" id="result">
+						<table  rules="all" cellspacing="10" cellpadding="10" style="margin-top:20px; ">
 							<tbody>
 								<tr >
-									<td colspan="3" height="110px">
+									<td style="background:#ffc0cc ;border-top-left-radius: 15px;" colspan="2" height="110px">
+										<p class="stp">-</p>
+										<p class="pifagor-char">-</p>	
 										
-										<p class="stp" >Додаткові Числа</p>
-										<p class="pifagor-char">—</p>
+									</td>
+									<td style="background:#ffc0cc ;" colspan="1" height="110px">
+										<p class="stp">Число Долі</p>
+										<p class="pifagor-char">-</p>	
+										
 									</td>
 									
 
-									<td width="120px" height="110px">
+									<td width="120px" height="110px" style="background:#ffc0cc ;border-top-right-radius: 15px;">
 										<p class="stp">Темперамент</p>
 										<p class="pifagor-char">-</p>								
 									</td>
@@ -108,7 +115,7 @@
 									</td>
 									<td width="120px" height="110px">
 										
-										<p class="stp">Здоров'я</p>
+										<p class="stp">Здоровʼя</p>
 										<p class="pifagor-char">—</p>
 									</td>
 									
@@ -118,7 +125,7 @@
 										<p class="pifagor-char">—</p>								
 									</td>
 
-									<td width="120px" height="110px">
+									<td width="120px" height="110px" style="background:#ffc0cc ;">
 										<p class="stp">Ціль</p>
 										<p class="pifagor-char">-</p>								
 									</td>
@@ -138,18 +145,18 @@
 									</td>
 										<td width="120px" height="110px">
 										
-										<p class="stp">Борг</p>
+										<p class="stp">Обовʼязок</p>
 										<p class="pifagor-char">—</p>									
 									</td>
-									<td width="120px" height="110px">
-										<p class="stp">Родина</p>
+									<td width="120px" height="110px" style="background:#ffc0cc ;">
+										<p class="stp">Сімʼя</p>
 										<p class="pifagor-char">-</p>								
 									</td>										
 								</tr>
 								<tr align="center">
 									<td width="120px" height="110px">
 										
-										<p class="stp">Інтерес</p>
+										<p class="stp">Цікавість</p>
 										<p class="pifagor-char">—</p>
 									</td>
 									<td width="120px" height="110px">
@@ -159,32 +166,49 @@
 									</td>
 									<td width="120px" height="110px">
 										
-										<p class="stp">Пам'ять</p>
+										<p class="stp">Памʼять</p>
 										<p class="pifagor-char">—</p>
 									</td>
-									<td width="120px" height="110px">
+									<td width="120px" height="110px"style="background:#ffc0cc ;">
 										<p class="stp">Звички</p>
 										<p class="pifagor-char">-</p>								
 									</td>										
 								</tr>
 								<tr align="center">
-									<td width="120px"  height="110px">
+									<td width="120px"  height="110px" style="background:#ffc0cc; border-bottom-left-radius:15px;">
 										<p class="stp">Самооцінка</p>
 										<p class="pifagor-char">—</p>	
 									</td>
-									<td width="120px"  height="110px">
+									<td width="120px"  height="110px" style="background:#ffc0cc ;">
 										<p class="stp">Побут</p>
 										<p class="pifagor-char">—</p>
+									</td>
+									<td width="120px"  height="110px" colspan="2" class="extr_num">
+										<p class="stp" >Додаткові Числа</p>
+										<p id="dynamicText">—</p>
+										
 									</td>
 																		
 								</tr>
 							</tbody>
 						</table>
 				</div>
+				
+
 			</div>
 			</div>
-			 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-			<script src="script.js"></script>
+			<div class="btn-table">
+				<a href="https://www.instagram.com/kateryna.lavrynovych/"><img src="img/instagram.png" alt=""></a>
+				<button id="copyButton"><img src="img/copy.png" alt="">Скопіювати розрахунок</button>
+			</div>
+			
+			<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+			<script src="script.js"></script>	
+			<script src="copybtn.js"></script>
+			
+			
+			
+			
 			
 </body>
 </html>
