@@ -15,9 +15,9 @@ function copyTextToClipboard(text) {
     document.body.removeChild(tempTextArea);
     
     // Provide user feedback
-    copyButton.textContent = 'Матриця була успішно скопіювана!';
+    copyButton.textContent = 'Розрахунок був успішно скопіюваний';
     setTimeout(() => {
-        copyButton.textContent = 'Скопіювати матрицю';
+        copyButton.textContent = 'Скопіювати розрахунок!';
     }, 2000); // Reset button text after 2 seconds
 }
 

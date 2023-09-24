@@ -159,6 +159,19 @@ table{
   border-radius: 15px;
   padding: 10px;
 }
+.lined::before{
+  content: "";
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: #000;
+  right: 38%;
+  top: 83%;
+  position: absolute;
+}
+.lined{
+  margin-bottom: 18px;
+}
 @media(max-width:600px){
   td{
     width: 90px;
@@ -189,5 +202,9 @@ table{
   }
   .select-selected{
     width: 70px;
+  }
+  .lined::before{
+    right: 12%;
+    top: 83%;
   }
 }
