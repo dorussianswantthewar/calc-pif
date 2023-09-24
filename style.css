@@ -159,3 +159,35 @@ table{
   border-radius: 15px;
   padding: 10px;
 }
+@media(max-width:600px){
+  td{
+    width: 70px;
+    height: 70px;
+  }
+  .calculator-p{
+    font-size: 18px;
+  }
+  input{
+    width: 100px;
+  }
+  .row{
+    align-items: flex-start;
+    margin-left: 20px;
+  }
+  .btn-table{
+    margin-top: 12px;
+    gap:40px;
+    justify-content: flex-start;
+    padding-bottom: 12px;
+  }
+  .btn-table button img{
+    width: 25px;
+  }
+  .select-flex{
+    gap: 10px;
+    width: 50px;
+  }
+  .select-selected{
+    width: 70px;
+  }
+}
